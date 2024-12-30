@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>foft-im</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#chatbox {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    padding: 10px;
+}
+#message {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+</style>
+</head>
+<body>
+    <h1>fortim web client</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="message" placeholder="type smth">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        var websocket = new WebSocket("ws://localhost:65432/"); // Replace with your server address
+
+        websocket.onopen = function(event) {
+            console.log("WebSocket connection opened");
+        };
+
+        websocket.onmessage = function(event) {
+            var chatbox = document.getElementById("chatbox");
+            var message = document.createElement("p");
+            message.innerHTML = event.data;
+            chatbox.appendChild(message);
+            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to bottom
+        };
+
+        websocket.onclose = function(event) {
+            console.log("WebSocket connection closed");
+        };
+
+        function sendMessage() {
+            var messageInput = document.getElementById("message");
+            var message = messageInput.value;
+            websocket.send(message);
+            messageInput.value = "";
+        }
+    </script>
+</body>
+</html>
