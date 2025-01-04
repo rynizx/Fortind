@@ -13,9 +13,9 @@
 
 # screenshots 🖼️
 
-`<sub><sup>`winter theme am i right??`</sup></sub>`
+<sub><sup>winter theme am i right??</sup></sub>
 ![image](https://github.com/user-attachments/assets/1156e97a-900c-4627-9ff7-2cfc69025534)
-`<sub><sup>`and thats the main theme lol`</sup></sub>`
+<sub><sup>and thats the main theme lol</sup></sub>
 ![image](https://github.com/user-attachments/assets/9a3ffb50-5e8e-41d4-bdcd-7532b57701b6)
 
 # so whats the site all about? 🤔
