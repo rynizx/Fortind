@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Example RSS Feed</title>
+        <link>http://www.example.com</link>
+        <description>This is an example of an RSS feed</description>
+        <language>en-us</language>
+        <item>
+            <title>this is a example rss api</title>
+            <link>http://www.example.com/another-example-entry</link>
+            <description>This is another example entry in the RSS feed</description>
+            <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+            <guid>http://www.example.com/another-example-entry</guid>
+        </item>
+        <item>
+            <title>Example entry</title>
+            <link>http://www.example.com/example-entry</link>
+            <description>This is an example entry in the RSS feed</description>
+            <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+            <guid>http://www.example.com/example-entry</guid>
+        </item>
+    </channel>
+</rss>

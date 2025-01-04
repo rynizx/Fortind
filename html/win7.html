@@ -1,0 +1,40 @@
+<head>
+  <title>7.css example</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/7.css" />
+  <style>
+    .window {
+      margin: 32px;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    @media (max-width: 600px) {
+      .window {
+        margin: 16px;
+        width: calc(100% - 32px);
+      }
+
+      footer {
+        margin: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">My First Program</div>
+    </div>
+    <div class="window-body">
+      <p>Hello, world!</p>
+      <input type="text" placeholder="Enter text here" style="width: 100%; margin-top: 10px;">
+    </div>
+  </div>
+  <footer style="margin: 32px; text-align: center;">
+    <p>&copy; 2024 ranvir singh All rights reserved.</p>
+  </footer>
+</body>
+</html>
