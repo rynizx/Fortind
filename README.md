@@ -16,7 +16,7 @@
 <sub><sup>winter theme am i right??</sup></sub>
 ![image](https://github.com/user-attachments/assets/1156e97a-900c-4627-9ff7-2cfc69025534)
 <sub><sup>and thats the main theme lol</sup></sub>
-![image](https://github.com/user-attachments/assets/9a3ffb50-5e8e-41d4-bdcd-7532b57701b6)
+![image](https://files.catbox.moe/s4v4bq.png)
 
 # so whats the site all about? 🤔
 
