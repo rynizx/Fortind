@@ -26,10 +26,7 @@ fort.ind is a website that i made during the pandemic in 2019 it was a little si
 
 everything here is done! if u got ideas please open a issue :P
 
-- [X] a actual native mac app
-- [X] a kinda okish web wrapper for windows
-- [X] Add delight to the experience
-- [X] finish adding emus
+- [ ] finish madston instance (finished but configing)
 - [X] fix bugs
 - [X] add more flash games
 - [X] read your guys ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
