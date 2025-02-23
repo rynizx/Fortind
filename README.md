@@ -26,7 +26,9 @@ fort.ind is a website that i made during the pandemic in 2019 it was a little si
 
 everything here is done! if u got ideas please open a issue :P
 
-- [ ] finish madston instance (finished but configing)
+- [x] finish madston instance (finished but configing)
 - [X] fix bugs
 - [X] add more flash games
 - [X] read your guys ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
+- [ ] rebulid the desktop app from the ground up
+- [ ] intgrate a new CDN that isint blocked and makes games load faster
