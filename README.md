@@ -4,7 +4,9 @@
 <br>
  <p align="center">
  the offical fort.ind repo
-</p>
+ 
+ 
+   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)
 
 # Welcome to fort.ind
 
