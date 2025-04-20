@@ -3,15 +3,15 @@
 </p>
 <br>
  <p align="center">
- the offical fort.ind repo
+ The official fort.ind repo
  
  
    [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)
 
-# Welcome to fort.ind
+# Welcome to Fort.ind
 
 > [!NOTE]
-> This git is still unfinised most things from fort.ind are not here yet
+> This git is still unfinished, and most things are from Fort.ind is not here yet
 
 # screenshots 🖼️
 
@@ -20,17 +20,17 @@
 <sub><sup>and thats the main theme lol</sup></sub>
 ![image](https://files.catbox.moe/s4v4bq.png)
 
-# so whats the site all about? 🤔
+# So what's the site all about? 🤔
 
-fort.ind is a website that i made during the pandemic in 2019 it was a little site at the time and it was used as a unblocked games site over the years it grew to somthing that ive never knew that would be so amazing :D
+Fort.ind is a website that I made during the pandemic in 2019. It was a little site at the time, and it was used as an unblocked games site. Over the years, it grew to something that I never knew would be so amazing :D
 
-# whats coming? ✨
+# What's coming? ✨
 
-everything here is done! if u got ideas please open a issue :P
+Everything here is done! If you've got ideas, please open an issue :P
 
-- [x] finish madston instance (finished but configing)
+- [x] finish fort.social instance (finished but configuring)
 - [X] fix bugs
 - [X] add more flash games
-- [X] read your guys ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
-- [ ] rebulid the desktop app from the ground up
-- [ ] intgrate a new CDN that isint blocked and makes games load faster
+- [X] read your guys' ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
+- [ ] rebuild the desktop app from the ground up
+- [x] integrate a new CDN that isn't blocked and makes games load faster
