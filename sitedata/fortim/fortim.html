@@ -38,7 +38,7 @@ body {
         websocket.onmessage = function(event) {
             var chatbox = document.getElementById("chatbox");
             var message = document.createElement("p");
-            message.innerHTML = event.data;
+            message.textContent = event.data;
             chatbox.appendChild(message);
             chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to bottom
         };
