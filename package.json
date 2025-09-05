@@ -52,7 +52,7 @@
     "concurrently": "^7.0.0",
     "csp-hash-generator": "0.0.3",
     "csso": "^4.0.3",
-    "datauri": "^3.0.0",
+    "datauri": "^4.0.0",
     "expect.js": "^0.3.1",
     "ffmpeg-static": "^4.4.0",
     "hasha": "^5.2.0",
