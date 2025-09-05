@@ -127,9 +127,14 @@ describe("check build output for a generic post", () => {
     });
 
     it("should link to twitter with noopener", () => {
-      const twitterLinks = Array.from(doc.querySelectorAll("a")).filter((a) =>
-        a.href.startsWith("https://twitter.com")
-      );
+      const twitterLinks = Array.from(doc.querySelectorAll("a")).filter((a) => {
+        try {
+          const u = new URL(a.href, URL);
+          return u.hostname === "twitter.com" || u.hostname === "www.twitter.com";
+        } catch (e) {
+          return false;
+        }
+      });
       for (let a of twitterLinks) {
         expect(a.rel).to.contain("noopener");
         expect(a.target).to.equal("_blank");
