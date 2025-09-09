@@ -3,10 +3,10 @@
 </p>
 <br>
  <p align="center">
- The official fort.ind repo
+ The official fort.ind repo 
  
  
-   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)
+   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)   ![Status](https://services.fort1nd.com/badge/_/status?labelColor=&color=&style=for-the-badge&label=Status)
 
 # Welcome to Fort.ind
 
