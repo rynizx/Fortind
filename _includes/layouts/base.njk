@@ -68,6 +68,11 @@
           {%- for entry in collections.all | eleventyNavigation %}
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>
           {%- endfor %}
+          <div style="display: flex; gap: 10px; align-items: center; margin-left: auto;">
+            <button on-click="calculator" style="padding: 6px 12px; background: #007cba; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Calculator</button>
+            <button on-click="analytics" style="padding: 6px 12px; background: #ea4335; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Analytics</button>
+            <button on-click="search" style="padding: 6px 12px; background: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Search</button>
+          </div>
         </div>
         <div id="reading-progress" aria-hidden="true"></div>
       </nav>
