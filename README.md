@@ -6,7 +6,7 @@
  The official fort.ind repo 
  
  
-   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)   ![Status](https://services.fort1nd.com/badge/_/status?labelColor=&color=&style=for-the-badge&label=Status)
+   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)   ![Status](https://services.fort1nd.com/badge/fortind-home/status?labelColor=&color=&style=for-the-badge&label=main)
 
 # Welcome to Fort.ind
 
