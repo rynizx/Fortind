@@ -6,7 +6,7 @@
  The official fort.ind repo 
  
  
-   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)   ![Status](https://services.fort1nd.com/badge/fortind-home/status?labelColor=&color=&style=for-the-badge&label=main)
+   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)
 
 # Welcome to Fort.ind
 
@@ -16,7 +16,8 @@
 # screenshots 🖼️
 
 <sub><sup>winter theme am i right??</sup></sub>
-![image](https://github.com/user-attachments/assets/1156e97a-900c-4627-9ff7-2cfc69025534)
+<img width="1919" height="910" alt="Screenshot 2025-12-22 113221" src="https://github.com/user-attachments/assets/0712fe55-bec9-4e44-9970-949d868f0c80" />
+
 <sub><sup>and thats the main theme lol</sup></sub>
 ![image](https://files.catbox.moe/s4v4bq.png)
 
