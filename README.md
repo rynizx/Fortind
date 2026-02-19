@@ -23,7 +23,7 @@
 
 # So what's the site all about? 🤔
 
-Fort.ind is a website that I made during the pandemic in 2019. It was a little site at the time, and it was used as an unblocked games site. Over the years, it grew to something that I never knew would be so amazing :D
+Fort.ind is a website I built during the 2019 pandemic. It was a small site at the time and was used as an unblocked games site. Over the years, it grew to something that I never knew would be so amazing :D
 
 # What's coming? ✨
 
