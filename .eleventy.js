@@ -200,7 +200,6 @@ module.exports = function (eleventyConfig) {
       safariReaderFix: true,
     }),
     level: [1, 2, 3, 4],
-    slugify: eleventyConfig.getFilter("slugify"),
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 

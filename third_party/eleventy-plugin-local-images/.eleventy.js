@@ -3,41 +3,48 @@ const path = require("path");
 const { JSDOM } = require("jsdom");
 const fetch = require("node-fetch");
 const sh = require("shorthash");
-const fileType = require("file-type");
 const metadata = require("../../_data/metadata.json");
+
+// Dynamic import for ESM-only file-type package
+let fileTypeFromBuffer;
+const getFileType = async (filename, buffer) => {
+  // Lazy load file-type (ESM module)
+  if (!fileTypeFromBuffer) {
+    const fileTypeModule = await import("file-type");
+    fileTypeFromBuffer = fileTypeModule.fileTypeFromBuffer;
+  }
+  
+  // infer the file ext from the buffer
+  const type = await fileTypeFromBuffer(buffer);
+
+  if (type && type.ext) {
+    // return the filename with extension
+    return `${filename}.${type.ext}`;
+  } else {
+    throw new Error(`Couldn't infer file extension for "${filename}"`);
+  }
+};
 
 let config = { distPath: "_site", verbose: false, attribute: "src" };
 
-const downloadImage = async (path) => {
+const downloadImage = async (imgPath) => {
   if (config.verbose) {
-    console.log("eleventy-plugin-local-images: Attempting to copy " + path);
+    console.log("eleventy-plugin-local-images: Attempting to copy " + imgPath);
   }
 
   try {
-    const imgBuffer = await fetch(path)
+    const imgBuffer = await fetch(imgPath)
       .then((res) => {
         if (res.status == 200) {
           return res;
         } else {
-          throw new Error(`File "${path}" not found`);
+          throw new Error(`File "${imgPath}" not found`);
         }
       })
       .then((res) => res.buffer());
     return imgBuffer;
   } catch (error) {
     console.log(error);
-  }
-};
-
-const getFileType = (filename, buffer) => {
-  // infer the file ext from the buffer
-  const type = fileType(buffer);
-
-  if (type.ext) {
-    // return the filename with extension
-    return `${filename}.${type.ext}`;
-  } else {
-    throw new Error(`Couldn't infer file extension for "${path}"`);
   }
 };
 
@@ -83,7 +90,7 @@ const processImageAttr = async (img, attribute) => {
         if (imgBuffer) {
           // check if the remote image has a file extension and then hash the filename
           hashedFilename = !path.extname(filename)
-            ? `${hash}-${getFileType(filename, imgBuffer)}`
+            ? `${hash}-${await getFileType(filename, imgBuffer)}`
             : `${hash}${path.extname(filename)}`;
 
           // create the file path from config
