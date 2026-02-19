@@ -76,7 +76,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require("./_11ty/json-ld.js"));
   eleventyConfig.addPlugin(require("./_11ty/optimize-html.js"));
   eleventyConfig.addPlugin(require("./_11ty/apply-csp.js"));
-  eleventyConfig.setDataDeepMerge(true);
+  // Note: setDataDeepMerge(true) is now default in Eleventy 2.0+
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
   eleventyConfig.addNunjucksAsyncFilter(
     "addHash",
@@ -195,9 +195,12 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     linkify: true,
   }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: "direct-link",
-    permalinkSymbol: "#",
+    permalink: markdownItAnchor.permalink.headerLink({
+      class: "direct-link",
+      safariReaderFix: true,
+    }),
+    level: [1, 2, 3, 4],
+    slugify: eleventyConfig.getFilter("slugify"),
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 

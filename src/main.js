@@ -267,7 +267,7 @@ document.body.addEventListener(
     }
     removeBlurredImage(e.target);
   },
-  /* capture */ "true"
+  /* capture */ true
 );
 for (let img of document.querySelectorAll("img")) {
   if (img.complete) {

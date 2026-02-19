@@ -19,9 +19,17 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-const { promisify } = require("util");
-const exists = promisify(require("fs").exists);
+const { access, constants } = require("fs").promises;
 const sharp = require("sharp");
+
+async function exists(path) {
+  try {
+    await access(path, constants.F_OK);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Generates sensible sizes for each image for use in a srcset.

@@ -66,18 +66,11 @@ const purifyCss = async (rawContent, outputPath) => {
           raw: before,
         },
       ],
-      /*extractors: [
-        {
-          extractor: require("purge-from-html").extract,
-          extensions: ["html"],
-        },
-      ],*/
       fontFace: true,
       variables: true,
     });
 
     const after = csso.minify(purged[0].css).css;
-    //console.log("CSS reduction", before.length - after.length);
 
     content = content.replace("</head>", `<style>${after}</style></head>`);
   }

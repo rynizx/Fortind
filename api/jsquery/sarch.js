@@ -1,12 +1,19 @@
 // search.js
 const axios = require('axios');
 
-// Your Google API Key
-const apiKey = 'AIzaSyC1Z4JTXSuOhgL4cd68ImJUnAxaT8vN3as';
-// Your Custom Search Engine ID (replace with yours)
-const cx = '416a70b07ca2e4220'; 
+// Use environment variables for API credentials (never hardcode secrets!)
+const apiKey = process.env.GOOGLE_API_KEY;
+const cx = process.env.GOOGLE_SEARCH_CX;
+
+if (!apiKey || !cx) {
+  console.warn('Warning: GOOGLE_API_KEY and GOOGLE_SEARCH_CX environment variables should be set');
+}
 
 async function search(query) {
+  if (!apiKey || !cx) {
+    throw new Error('Search API credentials not configured');
+  }
+  
   try {
     const response = await axios.get('https://www.googleapis.com/customsearch/v1', {
       params: {

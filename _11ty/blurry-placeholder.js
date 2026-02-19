@@ -29,7 +29,16 @@ const DatauriParser = require("datauri/parser");
 const parser = new DatauriParser();
 const readFile = promisify(require("fs").readFile);
 const writeFile = promisify(require("fs").writeFile);
-const exists = promisify(require("fs").exists);
+const { access, constants } = require("fs").promises;
+
+async function exists(path) {
+  try {
+    await access(path, constants.F_OK);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 const PIXEL_TARGET = 60;
 

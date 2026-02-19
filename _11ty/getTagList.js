@@ -1,28 +1,22 @@
-module.exports = function(collection) {
-  let tagSet = new Set();
-  collection.getAll().forEach(function(item) {
-    if( "tags" in item.data ) {
-      let tags = item.data.tags;
+/**
+ * Returns a list of unique tags from all collection items.
+ * Filters out common structural tags.
+ */
+const EXCLUDED_TAGS = new Set(["all", "nav", "post", "posts"]);
 
-      tags = tags.filter(function(item) {
-        switch(item) {
-          // this list should match the `filter` list in tags.njk
-          case "all":
-          case "nav":
-          case "post":
-          case "posts":
-            return false;
-        }
+module.exports = function (collection) {
+  const tagSet = new Set();
 
-        return true;
-      });
+  for (const item of collection.getAll()) {
+    const tags = item.data?.tags;
+    if (!tags) continue;
 
-      for (const tag of tags) {
+    for (const tag of tags) {
+      if (!EXCLUDED_TAGS.has(tag)) {
         tagSet.add(tag);
       }
     }
-  });
+  }
 
-  // returning an array in addCollection works in Eleventy 0.5.3
-  return [...tagSet];
+  return [...tagSet].sort();
 };

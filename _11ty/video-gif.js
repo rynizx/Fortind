@@ -22,14 +22,22 @@
 const { promisify } = require("util");
 const { join } = require("path");
 const shell = require("any-shell-escape");
-const exists = promisify(require("fs").exists);
+const { access, constants } = require("fs").promises;
 const exec = promisify(require("child_process").exec);
+
+async function exists(path) {
+  try {
+    await access(path, constants.F_OK);
+    return true;
+  } catch {
+    return false;
+  }
+}
 const pathToFfmpeg = require("ffmpeg-static");
 
 exports.gif2mp4 = async function (filename) {
   const dest = mp4Name(filename);
-  const exists = promisify(require("fs").exists);
-  if (await exists(dest)) {
+  if (await exists("_site" + dest)) {
     return dest;
   }
   const command = shell([
