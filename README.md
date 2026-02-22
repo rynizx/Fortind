@@ -11,19 +11,21 @@ The official fort.ind repo
 > [!NOTE]
 > This git is still unfinished, and most things are from Fort.ind is not here yet
 
-# screenshots 🖼️
+## screenshots 🖼️
 
-<sub><sup>winter theme am i right??</sup></sub>
-<img width="1919" height="910" alt="Screenshot 2025-12-22 113221" src="https://github.com/user-attachments/assets/0712fe55-bec9-4e44-9970-949d868f0c80" />
+### ~~winter theme am i right??~~
 
-<sub><sup>and thats the main theme lol</sup></sub>
+![Screenshot 2025-12-22 113221](https://github.com/user-attachments/assets/0712fe55-bec9-4e44-9970-949d868f0c80)
+
+### ~~and thats the main theme lol~~
+
 ![image](https://files.catbox.moe/s4v4bq.png)
 
-# So what's the site all about? 🤔
+## So what's the site all about? 🤔
 
 Fort.ind is a website I built during the 2019 pandemic. It was a small site at the time and was used as an unblocked games site. Over the years, it grew to something that I never knew would be so amazing :D
 
-# What's coming? ✨
+## What's coming? ✨
 
 Everything here is done! If you've got ideas, please open an issue :P
 
