@@ -12,7 +12,7 @@ The official fort.ind repo
 > This git is still unfinished, and most things are from Fort.ind is not here yet
 
 ## screenshots 🖼️
-
+![1771780901247](image/README/1771780901247.png)![1771780904591](image/README/1771780904591.png)
 ![Screenshot 2025-12-22 113221](https://github.com/user-attachments/assets/0712fe55-bec9-4e44-9970-949d868f0c80)
 
 ![image](https://files.catbox.moe/s4v4bq.png)
