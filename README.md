@@ -1,14 +1,12 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/eda1c7c8-6a51-423a-8a69-d9fe1ea2bfdb" />
-</p>
-<br>
- <p align="center">
- The official fort.ind repo 
- 
- 
-   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)
+# Fort.ind
 
-# Welcome to Fort.ind
+![Fort.ind Logo](https://github.com/user-attachments/assets/eda1c7c8-6a51-423a-8a69-d9fe1ea2bfdb)
+
+The official fort.ind repo
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)
+
+## Welcome to Fort.ind
 
 > [!NOTE]
 > This git is still unfinished, and most things are from Fort.ind is not here yet

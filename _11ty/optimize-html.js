@@ -19,7 +19,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-const minify = require("html-minifier").minify;
+const { minify } = require("html-minifier-terser");
 const AmpOptimizer = require("@ampproject/toolbox-optimizer");
 const ampOptimizer = AmpOptimizer.create({
   blurredPlaceholders: true,
@@ -77,10 +77,10 @@ const purifyCss = async (rawContent, outputPath) => {
   return content;
 };
 
-const minifyHtml = (rawContent, outputPath) => {
+const minifyHtml = async (rawContent, outputPath) => {
   let content = rawContent;
   if (outputPath && outputPath.endsWith(".html") && !isAmp(content)) {
-    content = minify(content, {
+    content = await minify(content, {
       removeAttributeQuotes: true,
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
