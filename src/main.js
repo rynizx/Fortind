@@ -40,7 +40,6 @@ expose("tweet", tweet);
 
 function share(anchor) {
   var url = anchor.getAttribute("href");
-  event.preventDefault();
   if (navigator.share) {
     navigator.share({
       url: url,
@@ -138,13 +137,16 @@ addEventListener("visibilitychange", ping);
  * @return {Promise} Promise object that resolves on script load event
  */
 const dynamicScriptInject = (src) => {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const script = document.createElement("script");
     script.src = src;
     script.type = "text/javascript";
     document.head.appendChild(script);
     script.addEventListener("load", () => {
       resolve(script);
+    });
+    script.addEventListener("error", () => {
+      reject(new Error(`Failed to load script: ${src}`));
     });
   });
 };
@@ -250,7 +252,7 @@ addEventListener("click", (e) => {
   const name = handler.getAttribute("on-click");
   const fn = exposed[name];
   if (!fn) {
-    throw new Error("Unknown handler" + name);
+    throw new Error("Unknown handler: " + name);
   }
   fn(handler);
 });

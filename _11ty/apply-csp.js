@@ -71,7 +71,7 @@ function parseHeaders(headersFile) {
     if (!line) continue;
     if (/^\S/.test(line)) {
       currentFilename = line;
-      headers[currentFilename] = [];
+      headers[currentFilename] = {};
     } else {
       line = line.trim();
       const h = line.split(/:\s+/);

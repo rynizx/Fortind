@@ -32,7 +32,7 @@ export default async function (req, event) {
 
   let cacheControl = "no-store";
   if (url.searchParams.get("ec") == "noscript") {
-    cacheControl = "max-age: 30";
+    cacheControl = "max-age=30";
   }
   const headers = {
     "Access-Control-Allow-Origin": isOriginallowlisted
@@ -60,7 +60,6 @@ async function cid(ip, otherStuff) {
   if (ip) {
     const encoder = new TextEncoder();
     const data = encoder.encode(
-      "sha256",
       ip + otherStuff + "this is open source"
     );
     const hashBuffer = await crypto.subtle.digest("SHA-256", data);
@@ -70,7 +69,7 @@ async function cid(ip, otherStuff) {
       .join("");
     return hashHex;
   }
-  return Math.random() * 1000; // They use a decimal looking format. It really doesn't matter.
+  return String(Math.random() * 1000); // They use a decimal looking format. It really doesn't matter.
 }
 
 async function proxyToGoogleAnalytics(req, url, body) {
@@ -89,7 +88,7 @@ async function proxyToGoogleAnalytics(req, url, body) {
   params.set("ua", params.get("ua") || headers.get("user-agent") || ""); // user agent override
   params.set(
     "cid",
-    params.get("cid") || (await cid(params.get("uip", params.get("ua"))))
+    params.get("cid") || (await cid(params.get("uip"), params.get("ua")))
   );
 
   const qs = params.toString();

@@ -31,10 +31,10 @@ const jsonLd = (rawContent, outputPath) => {
 
   if (outputPath && outputPath.endsWith(".html")) {
     const dom = new JSDOM(content);
-    const jsonLd = dom.window.document.querySelector(
+    const jsonLdScript = dom.window.document.querySelector(
       "script[type='application/ld+json']"
     );
-    if (!jsonLd) {
+    if (!jsonLdScript) {
       return content;
     }
 
@@ -42,11 +42,11 @@ const jsonLd = (rawContent, outputPath) => {
       ...dom.window.document.querySelectorAll("main img,amp-img"),
     ];
     try {
-      const obj = JSON.parse(jsonLd.textContent);
+      const obj = JSON.parse(jsonLdScript.textContent);
 
       if (images.length) {
         obj.image = images.map((img) => BASE_URL + img.src);
-        jsonLd.textContent = JSON.stringify(obj);
+        jsonLdScript.textContent = JSON.stringify(obj);
         content = dom.serialize();
       }
     } catch (e) {
