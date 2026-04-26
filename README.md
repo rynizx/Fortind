@@ -25,9 +25,9 @@ Fort.ind is a website I built during the 2019 pandemic. It was a small site at t
 
 Everything here is done! If you've got ideas, please open an issue :P
 
-- [x] finish fort.social instance (finished but configuring)
+- [x] finish fort.social instance 
 - [X] fix bugs
 - [X] add more flash games
 - [X] read your guys' ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
-- [ ] rebuild the desktop app from the ground up
+- [x] rebuild the desktop app from the ground up
 - [x] integrate a new CDN that isn't blocked and makes games load faster
