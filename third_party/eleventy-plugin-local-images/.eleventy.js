@@ -1,12 +1,22 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { JSDOM } = require("jsdom");
-const fetch = require("node-fetch");
 const sh = require("shorthash");
 const metadata = require("../../_data/metadata.json");
 
 // Dynamic import for ESM-only file-type package
 let fileTypeFromBuffer;
+let fetchFromUrl;
+
+const getFetch = async () => {
+  if (!fetchFromUrl) {
+    const fetchModule = await import("node-fetch");
+    fetchFromUrl = fetchModule.default;
+  }
+
+  return fetchFromUrl;
+};
+
 const getFileType = async (filename, buffer) => {
   // Lazy load file-type (ESM module)
   if (!fileTypeFromBuffer) {
@@ -33,15 +43,13 @@ const downloadImage = async (imgPath) => {
   }
 
   try {
-    const imgBuffer = await fetch(imgPath)
-      .then((res) => {
-        if (res.status == 200) {
-          return res;
-        } else {
-          throw new Error(`File "${imgPath}" not found`);
-        }
-      })
-      .then((res) => res.buffer());
+    const fetch = await getFetch();
+    const response = await fetch(imgPath);
+    if (response.status !== 200) {
+      throw new Error(`File "${imgPath}" not found`);
+    }
+
+    const imgBuffer = Buffer.from(await response.arrayBuffer());
     return imgBuffer;
   } catch (error) {
     console.log(error);

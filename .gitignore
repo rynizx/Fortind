@@ -6,3 +6,6 @@ js/min.js.map
 .vscode/
 .netlify/
 export
+.prettierignore
+.prettiercache
+eslintcache

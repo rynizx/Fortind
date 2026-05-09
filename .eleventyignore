@@ -12,3 +12,4 @@ functions
 test
 src
 .oryx_prod_node_modules/
+archive/generated-artifacts/
