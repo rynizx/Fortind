@@ -47,7 +47,7 @@
     "@ampproject/toolbox-optimizer": "^2.10.1",
     "any-shell-escape": "^0.1.1",
     "clean-css": "^5.3.3",
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.0",
     "csp-hash-generator": "0.0.3",
     "csso": "^5.0.5",
     "datauri": "^4.1.0",
